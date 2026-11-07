@@ -1,0 +1,427 @@
+/* Układ podstawowy i media */
+.chart {
+  width: 100%;
+  min-height: 450px;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+.media-frame {
+  border: 4px solid #ffffff;
+  border-radius: 4px;
+  box-shadow: var(--shadow-default);
+}
+
+.about-description {
+  box-shadow: var(--shadow-default);
+}
+
+.project-description {
+  box-shadow: var(--shadow-default);
+}
+
+.carousel-text-placeholder {
+  display: flex;
+  min-height: 280px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border: 2px dashed #a5a5b5;
+  border-radius: 4px;
+  background-color: var(--text-panel-background);
+  box-shadow: var(--shadow-default);
+  color: #55556a;
+  font-size: 20px;
+  text-align: center;
+}
+
+.project-gallery {
+  display: grid;
+  gap: 16px;
+  width: calc(100% - 32px);
+  max-width: 960px;
+  margin: 0 auto 40px;
+}
+
+.project-gallery-single {
+  max-width: 640px;
+}
+
+.project-gallery-double {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-photo-placeholder {
+  display: grid;
+  aspect-ratio: 4 / 3;
+  place-items: center;
+  border: 2px dashed #a5a5b5;
+  border-radius: 4px;
+  background-color: #f1f1f5;
+  color: #55556a;
+  font-size: 18px;
+}
+
+@media (max-width: 575.98px) {
+  .project-gallery-double {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
+#kontakt {
+  box-shadow: var(--shadow-default);
+}
+
+#kontakt footer {
+  width: calc(100% - 32px);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.footer-panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.footer-panel {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 0;
+  background-color: var(--text-panel-background);
+  box-shadow: var(--shadow-default);
+}
+
+.footer-panel-links {
+  flex-direction: column;
+}
+
+.footer-panel-links .list-inline {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-panel-links .list-inline-item {
+  display: block;
+  padding: 0;
+  text-align: center;
+}
+
+.footer-panel-links .list-inline-item a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0 auto;
+}
+
+.footer-logos img,
+.footer-logo-placeholder {
+  width: 120px;
+  height: 96px;
+  object-fit: contain;
+}
+
+@media (max-width: 575.98px) {
+  .footer-panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Logo i nagłówek */
+#mainNav .navbar-brand .brand-logo {
+  display: block;
+  width: 210px;
+  height: 120px;
+  margin-left: -30px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Reset odstępów nagłówka szablonu */
+header.masthead.mastheadv2 .site-heading {
+  padding: 0;
+  margin: 0;
+}
+
+/* #mainNav.is-scrolled {
+  background-color: #37446d !important;
+} */
+
+/* Wyłączenie animacji nawigacji szablonu */
+#mainNav .navbar-brand,
+#mainNav .navbar-toggler {
+  transition: none !important;
+}
+
+/* Wysokość nagłówka i stan po przewinięciu */
+header.masthead.mastheadv2 {
+  position: relative;
+  height: 150px !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transition: height 0.3s ease;
+}
+
+header.masthead.mastheadv2.header-small {
+  height: 70px !important;
+}
+
+/* Przytwierdzona nawigacja z gradientem */
+#mainNav,
+#mainNav.is-fixed,
+#mainNav.is-visible {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 !important;
+  transform: none !important;
+  animation: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  border: 0 !important;
+  background: var(--header-gradient) !important;
+  background-attachment: fixed !important;
+  box-shadow: var(--shadow-default) !important;
+  transition: background 0.3s ease !important;
+}
+
+/* Układ nawigacji i zmiana rozmiaru logo */
+#mainNav .navbar-brand {
+  order: 0;
+}
+
+#mainNav #navbarResponsive {
+  order: 1;
+}
+
+#mainNav .navbar-toggler {
+  order: 3;
+}
+
+#mainNav .theme-toggle {
+  order: 2;
+}
+
+#mainNav.navbar-small .navbar-brand .brand-logo {
+  width: 105px;
+  height: 60px;
+}
+
+@media (max-width: 991.98px) {
+  #mainNav .navbar-brand {
+    margin-right: auto;
+  }
+
+  #mainNav .navbar-toggler {
+    order: 1;
+  }
+
+  #mainNav .theme-toggle {
+    order: 2;
+  }
+
+  #mainNav #navbarResponsive {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  #mainNav .navbar-nav .nav-link,
+  #mainNav .navbar-toggler {
+    color: #fffaf5;
+  }
+
+  #mainNav .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Ukrycie nakładki szablonu */
+header.masthead.mastheadv2 .overlay {
+  display: none !important;
+}
+
+/* Kolory i stany przycisków */
+:root {
+  --header-gradient: linear-gradient(135deg, #29285a 0%, rgb(88, 110, 199) 100%);
+  --text-panel-background: #fdfdfd;
+  --button-background: #352f68;
+  --button-background-hover: #37446d;
+  --button-text: #ffffff;
+  --shadow-default: 0 6px 18px rgba(31, 29, 61, 0.22);
+  --shadow-hover: 0 8px 20px rgba(31, 29, 61, 0.3);
+  --shadow-active: 0 2px 6px rgba(31, 29, 61, 0.24);
+}
+
+.btn {
+  background-color: var(--button-background);
+  border-color: var(--button-background);
+  color: var(--button-text);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: var(--button-background-hover);
+  border-color: var(--button-background-hover);
+  color: var(--button-text);
+}
+
+.btn,
+.theme-toggle {
+  box-shadow: var(--shadow-default);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover,
+.theme-toggle:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.btn:active,
+.theme-toggle:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-active);
+}
+
+.theme-toggle {
+  flex: 0 0 auto;
+  margin-left: 12px;
+  padding: 7px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+/* Tryb jasny */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body:not(.dark-mode) .footer-basic,
+body:not(.dark-mode) .footer-basic .copyright {
+  color: #000000;
+}
+
+/* Tryb ciemny */
+body.dark-mode {
+  --text-panel-background: #3b3b3b;
+  --shadow-default: 0 6px 18px rgba(167, 154, 154, 0.1);
+  /* --shadow-hover: 0 8px 20px rgba(255, 255, 255, 0.18); */
+  /* --shadow-active: 0 2px 6px rgba(247, 247, 247, 0.08); */
+  background-color: #2b2b2c;
+  color: #ffffff;
+}
+
+body.dark-mode .about-description {
+  color: #ffffff;
+}
+
+body.dark-mode .carousel-text-placeholder {
+  border-color: #88889a;
+  color: #ffffff;
+}
+
+body.dark-mode .project-photo-placeholder {
+  border-color: #88889a;
+  background-color: #3b3b3b;
+  color: #ffffff;
+}
+
+/* Tekst i nagłówki treści */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode label,
+body.dark-mode .col,
+body.dark-mode .container {
+  color: #ffffff;
+}
+
+/* Linki w treści */
+body.dark-mode a:not(.navbar-brand):not(.nav-link) {
+  color: #ffffff;
+}
+
+/* Sekcje i elementy treści */
+/* body.dark-mode section,
+body.dark-mode main,
+body.dark-mode .content-section {
+  background-color: #000000;
+} */
+
+body.dark-mode .jumbotron {
+  background-color: var(--text-panel-background);
+  color: #ffffff;
+}
+
+body.dark-mode .footer-basic {
+  background-color: #272729;
+  color: #ffffff;
+}
+
+body.dark-mode .footer-basic .copyright {
+  color: #ffffff;
+}
+
+body.dark-mode .footer-logos img {
+  filter: brightness(0) invert(1);
+}
+
+/* Pola formularzy */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #555;
+}
+
+/* Gradient względem okna utrzymuje pasek i nagłówek wizualnie ciągłe podczas zmiany wysokości */
+header.masthead.mastheadv2 {
+  background: var(--header-gradient) !important;
+  background-attachment: fixed !important;
+}
